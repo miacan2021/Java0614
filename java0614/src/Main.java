@@ -1,4 +1,3 @@
-  
 import type.Reptile;
 import type.Bird;
 import type.Fish;
@@ -12,7 +11,6 @@ public class Main {
         Eagle eagle = new Eagle();
         Eagle2 eagle2 = new Eagle2();
     }  
-    
 }
 
 class  Crocodile {
@@ -29,18 +27,29 @@ class  Crocodile2 {
         System.out.println("Crocodile2= " + crocodile2.showInfo());
      }
 } 
-
 class Eel {
-    public Eel() {
-        Fish eel = new Fish("In river", "No", "Yes", 150, 100, "Fish", "O");
-        System.out.println("Release electric charge:" + eel.getReleaseElectricCharge());
+    public void getReleaseElectricCharge(String Answer) {
+       System.out.println("Release electric charge:" + Answer);
+    }
+    public Eel() { 
+        Fish eel = new Fish("In river", "No", 150, 100, "Fish", "O");
+        getReleaseElectricCharge("Yes");
         System.out.println("Eel= " + eel.showInfo());
     }
 }
+
 class Eel2 {
+        private String releaseElectricCharge;
+        public Eel2(String releaseElectricCharge) {
+            this.releaseElectricCharge = releaseElectricCharge;
+        }
+        public void getReleaseElectricCharge() {
+            System.out.println("Release electric charge:" + releaseElectricCharge);
+         }
     public Eel2() {
+        this.releaseElectricCharge = "Can";  
         Fish eel2 = new Fish();
-        System.out.println("Release electric charge:" + eel2.getReleaseElectricCharge());
+        getReleaseElectricCharge();
         System.out.println("Eel2= " + eel2.showInfo());
     }
 }
@@ -60,6 +69,9 @@ class Eagle2 {
 }
 
 
+
+
+    
 
 
     
